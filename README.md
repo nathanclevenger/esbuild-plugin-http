@@ -3,12 +3,11 @@
 ```
 const esbuild =  require('esbuild')
 const httpPlugin =  require('esbuild-plugin-http')
-const { httpPlugin } = require('../index.js')
 
 esbuild.build({
-    entryPoints: ['./test/worker.js'],
+    entryPoints: ['./worker.js'],
     bundle: true,
-    outfile: './test/dist.js',
+    outfile: './dist/index.js',
     plugins: [httpPlugin],
   }).catch(() => process.exit(1))
 ```
@@ -22,7 +21,7 @@ export default {
 }
 ```
 
-output.js:
+dist/index.js:
 ```
   // http-url:https://pkg.do/-/apis.do@v0.1.0-nHviMlSrf8ac1z8OcKGJ/dist=es2019,mode=imports/optimized/apis.do.js
   var json = (data) => new Response(JSON.stringify({ user, redirect, body, data }, null, 2), { headers: { "content-type": "application/json; charset=utf-8" } });

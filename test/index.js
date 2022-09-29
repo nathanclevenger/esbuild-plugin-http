@@ -1,5 +1,5 @@
 const esbuild =  require('esbuild')
-const { httpPlugin } = require('../index.js')
+const httpPlugin = require('../index.js')
 
 esbuild.build({
     entryPoints: ['./test/worker.js'],
