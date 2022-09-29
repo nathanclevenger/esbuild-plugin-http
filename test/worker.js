@@ -1,5 +1,4 @@
-import { compact } from 'https://cdn.skypack.dev/lodash-es'
-
-export default {
-  fetch: req => new Response(JSON.stringify(compact([0, 1, false, 2, '', 3])))
-}
+import { Router } from 'https://pkg.do/itty-router@2.6.5'
+const router = Router()
+router.get('/', () => new Response('Hello, world!'))
+export default router.handler
