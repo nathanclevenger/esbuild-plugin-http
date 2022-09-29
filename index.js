@@ -1,4 +1,4 @@
-module.exports.httpPlugin = {
+module.exports = {
     name: 'http',
     setup(build) {
       let https = require('https')
