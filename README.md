@@ -2,6 +2,7 @@
 
 ```
 const esbuild =  require('esbuild')
+const httpPlugin =  require('esbuild-plugin-http')
 const { httpPlugin } = require('../index.js')
 
 esbuild.build({
